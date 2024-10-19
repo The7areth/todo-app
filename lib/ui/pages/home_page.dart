@@ -45,12 +45,39 @@ class _HomePageState extends State<HomePage> {
 
   DateTime _selectedDate = DateTime.now();
   final TaskController _taskController = Get.put(TaskController());
+<<<<<<< HEAD
+=======
+  final List<Widget> _pages = [
+    HomePage(),  // Page for 'Home'
+    HabitsPage(), // Page for 'Habits'
+  ];
+>>>>>>> 3228cf64149e5868d9b162b36e51efef35ac2200
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     return Scaffold(
       backgroundColor: context.theme.colorScheme.background,
+<<<<<<< HEAD
       appBar: null,
+=======
+      appBar: _appBar(),
+      bottomNavigationBar: BottomNavigationBar(
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.water_drop),
+            label: 'Habits',
+          ),
+        ],
+        currentIndex: _selectedIndex,
+        selectedItemColor: Colors.red[300]!,
+        onTap: _onItemTapped,
+      ),
+
+>>>>>>> 3228cf64149e5868d9b162b36e51efef35ac2200
       body: Column(
         children: [
           _addTaskBar(),
@@ -66,9 +93,51 @@ class _HomePageState extends State<HomePage> {
 
   AppBar _appBar() {
     return AppBar(
+<<<<<<< HEAD
       elevation: 0,
       backgroundColor: context.theme.colorScheme.background,
       actions: [],
+=======
+      leading: IconButton(
+        onPressed: () {
+          ThemeServices().switchTheme();
+          /*notifyHelper.displayNotification(
+            title: "Theme Changed",
+            body: "body",
+          );
+          notifyHelper.scheduledNotification();*/
+        },
+        icon: Icon(
+          Get.isDarkMode
+              ? Icons.wb_sunny_outlined
+              : Icons.nightlight_round_outlined,
+          size: 24,
+          color: Get.isDarkMode ? Colors.white : darkGreyClr,
+        ),
+      ),
+      elevation: 0,
+      backgroundColor: context.theme.colorScheme.background,
+      actions: [
+        IconButton(
+          onPressed: () {
+            notifyHelper.cancelAllNotification();
+            _taskController.deleteAllTasks();
+          },
+          icon: Icon(
+            Icons.cleaning_services_outlined,
+            size: 24,
+            color: Get.isDarkMode ? Colors.white : darkGreyClr,
+          ),
+        ),
+        const CircleAvatar(
+          backgroundImage: AssetImage("images/person.jpeg"),
+          radius: 18,
+        ),
+        const SizedBox(
+          width: 20,
+        ),
+      ],
+>>>>>>> 3228cf64149e5868d9b162b36e51efef35ac2200
     );
   }
 

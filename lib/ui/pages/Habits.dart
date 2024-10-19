@@ -42,7 +42,12 @@ class _HabitsPageState extends State<HabitsPage> {
     SizeConfig().init(context);
     return Scaffold(
       backgroundColor: context.theme.colorScheme.background,
+<<<<<<< HEAD
       appBar: null,
+=======
+      appBar: _buildAppBar(),
+      bottomNavigationBar: _buildBottomNavigationBar(),
+>>>>>>> 3228cf64149e5868d9b162b36e51efef35ac2200
       body: Column(
         children: [
           _buildAddTaskBar(),
@@ -89,6 +94,29 @@ class _HabitsPageState extends State<HabitsPage> {
     );
   }
 
+<<<<<<< HEAD
+=======
+  BottomNavigationBar _buildBottomNavigationBar() {
+    return BottomNavigationBar(
+      items: const <BottomNavigationBarItem>[
+        BottomNavigationBarItem(
+          icon: Icon(Icons.home),
+          label: 'Home',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.water_drop),
+          label: 'Habits',
+        ),
+      ],
+      currentIndex: _selectedIndex,
+      selectedItemColor: Colors.red[300],
+      onTap: (index) => setState(() {
+        _selectedIndex = index; // Update the selected tab
+      }),
+    );
+  }
+
+>>>>>>> 3228cf64149e5868d9b162b36e51efef35ac2200
   Widget _buildAddTaskBar() {
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),

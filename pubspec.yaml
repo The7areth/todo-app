@@ -46,7 +46,10 @@ dependencies:
   flutter_staggered_animations: ^1.0.0
   flutter_svg: ^2.0.8
   rxdart: ^0.27.2
+<<<<<<< HEAD
   image_picker: ^0.8.7+3
+=======
+>>>>>>> 3228cf64149e5868d9b162b36e51efef35ac2200
 
 dev_dependencies:
   flutter_test:
@@ -74,7 +77,10 @@ flutter:
     - images/person.jpeg
     - images/task.svg
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3228cf64149e5868d9b162b36e51efef35ac2200
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg

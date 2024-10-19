@@ -87,6 +87,7 @@ TextStyle get body2Style {
     ),
   );
 }
+<<<<<<< HEAD
 
 class ThemeController extends GetxController {
   RxBool isDarkMode = false.obs;
@@ -97,3 +98,5 @@ class ThemeController extends GetxController {
 
   ThemeMode get currentTheme => isDarkMode.value ? ThemeMode.dark : ThemeMode.light;
 }
+=======
+>>>>>>> 3228cf64149e5868d9b162b36e51efef35ac2200

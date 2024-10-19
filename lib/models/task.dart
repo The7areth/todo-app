@@ -8,7 +8,10 @@ class Task {
   String? date;
   String? startTime;
   String? endTime;
+<<<<<<< HEAD
   String? projectName;
+=======
+>>>>>>> 3228cf64149e5868d9b162b36e51efef35ac2200
   int? color;
   int? remind;
   String? repeat;
@@ -18,7 +21,10 @@ class Task {
     this.id,
     this.title,
     this.note,
+<<<<<<< HEAD
     this.projectName,
+=======
+>>>>>>> 3228cf64149e5868d9b162b36e51efef35ac2200
     this.isCompleted,
     this.date,
     this.startTime,

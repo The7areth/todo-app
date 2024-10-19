@@ -20,8 +20,13 @@ class _AddHabitPageState extends State<AddHabitPage> {
   final TextEditingController _customUnitController = TextEditingController();
 
   DateTime _selectedDate = DateTime.now();
+<<<<<<< HEAD
   String _startTime = DateFormat("hh:mm").format(DateTime.now());
   String _endTime = DateFormat("hh:mm").format(DateTime.now().add(const Duration(minutes: 15)));
+=======
+  String _startTime = DateFormat("hh:mm a").format(DateTime.now());
+  String _endTime = DateFormat("hh:mm a").format(DateTime.now().add(const Duration(minutes: 15)));
+>>>>>>> 3228cf64149e5868d9b162b36e51efef35ac2200
   int _selectedRemind = 5;
   List<int> remindList = [5, 10, 15, 20];
   String _selectedUnit = 'Cups';
